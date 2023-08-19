@@ -50,8 +50,8 @@ class PhoneNumVC: UIViewController {
     
     private func makeRequest(completion: @escaping () -> () ) {
         //TESTING ONLY
-        codeTextField.text = "+91"
-        numberTextField.text = "9876543212"
+        //codeTextField.text = "+91"
+        //numberTextField.text = "9876543212"
         
         let url = URL(string: "https://app.aisle.co/V1/users/phone_number_login?number=\(phoneNumberFormatted)")!
         var request: URLRequest = URLRequest(url: url)

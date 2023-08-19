@@ -59,7 +59,7 @@ class OtpVC: UIViewController {
     
     private func makeRequest(completion: @escaping (String) -> () ) {
         //TESTING ONLY
-        otpTextField.text = "1234"
+        //otpTextField.text = "1234"
         
         let url = URL(string: "https://app.aisle.co/V1/users/verify_otp?number=\(previousNumberFormatted)&otp=\(otp)")!
         
