@@ -89,7 +89,8 @@ class NotesVC: UIViewController {
         let url = URL(string: "https://app.aisle.co/V1/users/test_profile_list")!
         
         var request: URLRequest = URLRequest(url: url)
-        request.setValue(authorization, forHTTPHeaderField:"Authorization")
+        request.setValue(Authorization.shared.token, forHTTPHeaderField:"Authorization")
+
         URLSession.shared.dataTask(with: request) { data, response, error in
             
             if let error = error {

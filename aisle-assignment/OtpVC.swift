@@ -35,7 +35,7 @@ class OtpVC: UIViewController {
     
     private func segueToTabController(authToken: String) {
         self.authToken = authToken
-        authorization = authToken
+        Authorization.shared.token = authToken
         
         if authToken != "" {
             DispatchQueue.main.async {
@@ -90,6 +90,9 @@ class OtpVC: UIViewController {
 }
 
 
+class Authorization {
+    static let shared = Authorization()
+    var token: String = ""
 
-
-var authorization = ""
+    private init() { }
+}
